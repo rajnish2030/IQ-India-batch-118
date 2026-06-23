@@ -233,9 +233,176 @@
 #         second_highest = i
 # print("Second highest =",second_highest)
 
-# #13. Reverse the list [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56].
+# # #13. Reverse the list [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56].
 # def reverse(li):
 #     rev = []
 #     for i in li:
-#         if i == rev:
+#         rev = [i] + rev
+#     return rev
+# li = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# print(reverse(li))
+
+# # reverse list  (insert)
+# li = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# rev = []
+# for i in li:
+#     rev.insert(0,i) 
+# print(rev)   
+
+# #list
+# li = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# print("reverse",[i for i in li[::-1]])
+
+# # loop
+# li = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# rev = []
+# for i in li:
+#     rev = [i] + rev
+# print(rev)
+
+# # 14. Arrange the list [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56] in ascending order. 
+# def asss_order(num):
+#     return sorted(num)
+
+# num = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# print(asss_order(num))
+
+# # #loop
+# num = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# for i in range(len(num)):
+#     for j in range(i+1,len(num)):
+#         if num[i]> num[j]:
+#             num[i],num[j] = num[j],num[i]
+# print(num)
+
+# # 15. Arrange the list [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56] in descending order. 
+# #   function
+# def descending_order(num):
+#     return sorted(num,reverse=True)
+# num =[1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# print(descending_order(num))
+
+# # loop with function
+# def descending_order(num):
+#     for i in range(len(num)):
+#         for j in range(i+1,len(num)):
+#             if num[i] < num[j]:
+#                 asc = num[i]
+#                 num[i] = num[j]
+#                 num[j] = asc
+#         return num
+# num = [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# print(descending_order(num))
+
+# #simple 
+# num1 =  [1, 2, 3, 4, 56, 1, 22, 23, 33, 23, 56]
+# num1.sort(reverse=True)
+# print(num1)
+
+# #16. Write a Python program to print all the vowels present in the given list of strings ["Dreamer", "infotech"].
+# def vowel_check(str):
+#     vowel = "aeiouAEIOU"
+#     for i in str:
+#         for ch in i:
+#             if ch in vowel:
+#                 print(ch , "is vowel")
+
+# str = ["Dreamer", "infotech"]
+# vowel_check(str)
+
+
+# #list
+# str = ["Dreamer", "infotech"]
+# print("vowel",[ch for i in str for ch in i if ch.lower()in "aeiou"])
+
+# # 17. Write a Python program to take input from the user to create a list of elements.
+# # The user should input each element of the list one by one. 
+# # Create a list with these elements (maximum of 5 elements).
+# def list_el():
+#     my_list =[]
+#     for i in range(5):
+#         element = int(input("Enter your Element "))
+#         my_list.append(element)
+#     return my_list
+# show = list_el()
+# print("List of Element = ",show)
+
+# list_1 =[]
+# for i in range(5):
+#     show = int(input("Enter your element: "))
+#     list_1.append(show)
+# print("My element =",list_1)
+
+
+# #18. Write a Python program to generate a list of numbers in reverse order from 10 to 1 using list comprehension. 
+# #fuction
+# def reverse():
+#     for i in range(10, 0, -1):
+#         print(i)
+
+# reverse()
+
+# #  second ways
+# def revser_order():
+#     return list(range(10,0,-1))
+# print(revser_order())
+
+# # third method
+# list_num = []
+# for i in range(10,0,-1):
+#     list_num.append(i)
+# print(list_num)
+
+# #lc
+# list_num = [i for i in range(10,0,-1)]
+# print(list_num)
+
+# #19. Create a list of square numbers from 1 to 10 using list comprehension. 
+# num = []
+# for i in range(1,11):
+#     if i > 0 and i<= 10:
+#         print(i**2)
+
+# #list comp
+# square = [i**2 for i in range(1,11)]
+# print(square)
+
+# # function
+# def square():
+#     for i in range(1,11):
+#         print(i**2)
+# square()
+
+# # second method
+# def square_num():
+#     square = []
+#     for i in range(1,11):
+#         square.append(i**2)
+#     return square
+# print(square_num())
+
+
+# #20. Create a list of even numbers from 1 to 10 using list comprehension. 
+# num = []
+# for i in range(1,11):
+#     if i % 2 == 0:
+#         print(i)
+
+# #list comprehension. 
+# num = [i for i in range(1,11) if i % 2 == 0 ]
+# print(num)
+
+# # function
+# def even_number():
+#     even = []
+#     for i in range(1,11):
+#         if i % 2 == 0:
+#             even.append(i)
+#     return even
+# print(even_number())
+
+
+# 21. Filter strings from the list language = ['python', 'php', 'java', 
+# 'c++', 'javascript', 'ruby'] that contain a specific letter provided by 
+# the user, using list comprehension. 
 

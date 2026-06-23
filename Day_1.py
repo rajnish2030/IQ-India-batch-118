@@ -96,6 +96,7 @@
 # for i in name:
 #     rev = i + rev
 # print("Reversed Name:", rev)
+
 # #while
 # name = "rajnish"
 # rev = ""
@@ -188,21 +189,21 @@
 #     print("Not palindrome")
 
 
-name = "Rajnish"
-for i in range(len(name)):
-    print(i,":",name[i])
+# name = "Rajnish"
+# for i in range(len(name)):
+#     print(i,":",name[i])
 
-name = "Rajnish"
-for index, ch in enumerate(name):
-    print(index, ":",ch)
+# name = "Rajnish"
+# for index, ch in enumerate(name):
+#     print(index, ":",ch)
 
-name = "python"
-index = 0
-for i in name:
-    index += 1
-    print(i,"::",index)
+# name = "python"
+# index = 0
+# for i in name:
+#     index += 1
+#     print(i,"::",index)
 
-mame =[10,20,40,30]
-mame.append(25)
-mame.insert(3,35)
-print(mame)
+# mame =[10,20,40,30]
+# mame.append(25)
+# mame.insert(3,35)
+# print(mame)
