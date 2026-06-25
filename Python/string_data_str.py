@@ -2,7 +2,7 @@
 # name = "Rajnish"
 # print(name.isupper())
 # print(name.islower())
-# print(name.upper())
+# print(name.upper())  # all alphabet convert into capital
 # print(name.lower())
 # print(name.capitalize())
 #----------------------------------------------
@@ -139,9 +139,10 @@
 #     emp_list.append(i)
 # print(emp_list)
 
-#  break all alphbeta in string
-name = "My pyhton code is vs"
-list = list(name)
-print(list)
+# #  break all alphbeta in string
+# name = "My pyhton code is vs"
+# list = list(name)
+# print(list)
 
 # regex opertion     -----------------------
+

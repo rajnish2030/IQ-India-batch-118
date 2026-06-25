@@ -203,3 +203,26 @@
 
 # info = dict(zip(keys, values))
 # print(info)  # {'name': 'Rahul', 'age': 25, 'city': 'Mumbai'}
+
+
+# employee_name = ["Rajnish","hoit","jisju"]
+# cap = []
+# for i in employee_name:
+#     cap.append(i.upper())
+# print(cap)
+
+# employee_name = ["Rajnish","hoit","jisju"]
+# vowels = "aeiouAEIOU"
+# for i in employee_name:
+#     for j in i:
+#         if j in vowels:
+#             print(j)
+
+
+employee_name = ["Rajnish","hoit","jisju"]
+cap = []
+for i in employee_name:
+    if i in employee_name:
+        cap.append(i.upper())
+print(cap)
+

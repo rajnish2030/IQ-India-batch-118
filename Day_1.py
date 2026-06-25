@@ -207,3 +207,27 @@
 # mame.append(25)
 # mame.insert(3,35)
 # print(mame)
+
+# str1 = ["ram","roihan","jishu"]
+# cap = []
+# for i in str1:
+#     if i in str1:
+#         cap.uppar(i)
+#     print(cap)
+
+
+# str1=[90,30,60,45]
+# odd = []
+# even = []
+# for i in str1:
+#     if i % 2 == 0:
+#         even.append(f"{i} : Even")
+#     else:
+#         odd.append(f"{i} : Odd")
+# print(odd,even)
+
+# str1 = ["python"]
+# for i in str1:
+#     print(i[::-1])
+
+
