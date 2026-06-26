@@ -4,7 +4,6 @@ res=(list(string1-vowel))
 print(res)
 
 #_---ADD()-----------
-1.
 str1 ={"Rajnish","Rahul","Rohan","Rohit"}
 str1.add("Rocky")
 print(list(str1))
