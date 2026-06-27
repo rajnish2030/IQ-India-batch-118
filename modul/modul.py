@@ -58,8 +58,12 @@ import random
 # data-Time
 
 
+# import re
+# text = "Python is Easy"
+# print(re.search("Easy", text))
 
-
+# text = "Age 22 Roll 101"
+# print(re.findall(r"\d+", text))
 
 
 

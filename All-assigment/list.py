@@ -410,7 +410,264 @@
 # print(even_number())
 
 
-# 21. Filter strings from the list language = ['python', 'php', 'java', 
-# 'c++', 'javascript', 'ruby'] that contain a specific letter provided by 
-# the user, using list comprehension. 
+# # 21. Filter strings from the list language = ['python', 'php', 'java', 
+# # 'c++', 'javascript', 'ruby'] that contain a specific letter provided by 
+# # the user, using list comprehension. 
+# language = ['python', 'php', 'java', 'c++', 'javascript', 'ruby']
+# letter = input("Enter a letter: ")
+# result = []
+# for lang in language:
+#     if letter.lower() in lang.lower():
+#         result.append(lang)
+# print(result)
 
+# #22. Flatten a nested list like [[1,2], [3,4], [5,6]] into a single list. 
+# nested_list = [[1, 2], [3, 4], [5, 6]]
+# flat_list = [num for sublist in nested_list for num in sublist]
+# print(flat_list)
+
+
+# # 23. Find the frequency of each element in a list. 
+# # List: 
+# # [1, 2, 2, 3, 4, 1, 5, 2] 
+# # Output: 
+# # 1 → 2 times 
+# # 2 → 3 times 
+# # 3 → 1 time 
+# # 4 → 1 time 
+# # 5 → 1 time 
+# numbers = [1, 2, 2, 3, 4, 1, 5, 2]
+# frequency = {num: numbers.count(num) for num in set(numbers)}
+# print(frequency)
+
+# # #24. Check whether a given list is a palindrome. 
+# # List: 
+# # [1, 2, 3, 2, 1] 
+# # Output: 
+# # Palindrome
+# #---------------------------
+# numbers = [1, 2, 3, 2, 1]
+# if numbers == list(reversed(numbers)):
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+# #---------------------------
+# numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+# if numbers == numbers[::-1]:
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+
+# # #25. Find the longest string in a list of strings.   
+# # List:["cat", "elephant", "dog", "hippopotamus"] 
+# # Output: "hippopotamus"
+# words = ["cat", "elephant", "dog", "hippopotamus"]
+# longest = words[0]
+# for word in words:
+#     if len(word) > len(longest):
+#         longest = word
+# print(longest)
+
+# #--------------------------
+# words = input("Enter words separated by spaces: ").split()
+# longest = max(words, key=len)
+# print("Longest word:", longest)
+
+# # #26. Count how many strings in a list start with a vowel. 
+# # List: 
+# # ["apple", "banana", "orange", "umbrella", "grape", "ice"] 
+# # Output: 
+# # 4 strings start with a vowel 
+# # (apple, orange, umbrella, ice)
+# words = ["apple", "banana", "orange", "umbrella", "grape", "ice"]
+# count = 0
+# for word in words:
+#     if word[0].lower() in "aeiou":
+#         count += 1
+# print(count)
+#----------------------------------------------------------------------
+# words = ["apple", "banana", "orange", "umbrella", "grape", "ice"]
+# count = sum(word[0].lower() in "aeiou" for word in words)
+# print(count)
+
+# #27. Replace all negative numbers in a list with zero 
+# List: 
+# [5, -3, 7, -1, 0, -8, 4] 
+# Output: 
+# [5, 0, 7, 0, 0, 0, 4]
+
+# numbers = [5, -3, 7, -1, 0, -8, 4]
+# result = []
+# for num in numbers:
+#     if num < 0:
+#         result.append(0)
+#     else:
+#         result.append(num)
+# print(result)
+#------------------------------------------------------------
+# numbers = [5, -3, 7, -1, 0, -8, 4]
+# result = [0 if num < 0 else num for num in numbers]
+# print(result)
+
+##28. Create a new list containing only prime numbers from a given list.
+# numbers = [2, 4, 5, 6, 7, 8, 11, 13, 15, 17, 20]
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#     return True
+# prime_numbers = [num for num in numbers if is_prime(num)]
+# print(prime_numbers)
+
+# #29. Convert a list of integers into a single integer number (e.g., [1,2,3,4] → 1234). 
+# numbers = [1, 2, 3, 4]
+# result = 0
+# for num in numbers:
+#     result = result * 10 + num
+# print(result)
+          
+# #30. Group elements of a list based on even and odd indices
+# numbers = [10, 20, 30, 40, 50, 60, 70]
+# even_index = [numbers[i] for i in range(len(numbers)) if i % 2 == 0]
+# odd_index = [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
+
+# print("Even Index:", even_index)
+# print("Odd Index :", odd_index)
+
+# #31. Find the largest even number in a list.
+# numbers = [12, 5, 8, 21, 18, 7, 30, 15]
+# largest_even = max([num for num in numbers if num % 2 == 0])
+# print("Largest Even Number:", largest_even)
+
+
+# # #32. Find the majority element in a list (an element that appears more than n/2 times). 
+# # List:[2, 2, 1, 2, 3, 2, 2] 
+# # Output:2
+# numbers = [2, 2, 1, 2, 3, 2, 2]
+# n = len(numbers)
+# for num in numbers:
+#     if numbers.count(num) > n // 2:
+#         print("Majority Element:", num)
+#         break
+
+# # 33. Find the difference between the maximum and minimum values in a list. 
+# # List:[10, 4, 7, 2, 15, 6] 
+# # Output:13
+# numbers = [10, 4, 7, 2, 15, 6]
+# difference = max(numbers) - min(numbers)
+# print("Difference:", difference)
+
+# # 34. Remove every third element from a list.   
+# # List:[1, 2, 3, 4, 5, 6, 7, 8, 9] 
+# # Output:[1, 2, 4, 5, 7, 8]
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# result = [numbers[i] for i in range(len(numbers)) if (i + 1) % 3 != 0]
+# print(result)
+
+
+# # 35. Insert an element at every even index of a list. 
+# # Original List:[1, 2, 3] 
+# # Element to Insert: 0 
+# # Output:[0, 1, 0, 2, 0, 3]
+# numbers = [1, 2, 3]
+# element = 0
+# result = []
+# for num in numbers:
+#     result.append(element)
+#     result.append(num)
+# print(result)
+
+# # #36. Rearrange a list so that positive and negative numbers alternate. 
+# # List: [1, 2, -3, -4, 5, -6] 
+# # Output:[1, -3, 2, -4, 5, -6]
+# numbers = list(map(int, input("Enter numbers: ").split()))
+
+# positive = [num for num in numbers if num >= 0]
+# negative = [num for num in numbers if num < 0]
+
+# result = []
+
+# for i in range(min(len(positive), len(negative))):
+#     result.append(positive[i])
+#     result.append(negative[i])
+
+# result.extend(positive[len(negative):])
+# result.extend(negative[len(positive):])
+
+# print(result)
+
+
+# #37. Find all pairs of elements in a list whose sum equals a given target number. 
+# # List = [2, 4, 3, 5, 7, 8, 9] 
+# # Target = 7 
+# # Valid pairs:(2, 5),(4, 3)
+# numbers = [2, 4, 3, 5, 7, 8, 9]
+# target = 7
+
+# pairs = []
+
+# for i in range(len(numbers)):
+#     for j in range(i + 1, len(numbers)):
+#         if numbers[i] + numbers[j] == target:
+#             pairs.append((numbers[i], numbers[j]))
+
+# print(pairs)
+
+
+# #38. Find the Missing Number from a Sequence. 
+# # List:[1, 2, 4, 5, 6] 
+# # Expected Range: 1 to 6 
+# # Output:3
+
+# numbers = [1, 2, 4, 5, 6]
+# n = 6
+# expected_sum = n * (n + 1) // 2
+# actual_sum = sum(numbers)
+
+# missing = expected_sum - actual_sum
+
+# print("Missing Number:", missing)
+
+# # #39. Split a List into Chunks of Size 3. 
+# # List:[1, 2, 3, 4, 5, 6, 7, 8, 9] 
+# # Output:[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# result = []
+# for i in range(0, len(numbers), 3):
+#     result.append(numbers[i:i+3])
+# print(result)
+
+# 40. Reverse Each String in a List. 
+# List:["python", "java", "script"] 
+# Output: ["nohtyp", "avaj", "tpircs"]
+
+# words = ["python", "java", "script"]
+# result = []
+# for word in words:
+#     result.append(word[::-1])
+# print(result)
+
+# # #41. Extract All Digits from a List of Strings 
+# # List:["abc123", "45def", "gh6"] 
+# # Output:["123", "45", "6"] 
+# words = ["abc123", "45def", "gh6"]
+# result = ["".join(ch for ch in word if ch.isdigit()) for word in words]
+# print(result)
+
+
+# # 42. Find All Anagram Groups in a List of Words. 
+# # List:["eat", "tea", "tan", "ate", "nat", "bat"] 
+# # Output:[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+# words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+# groups = {}
+# for word in words:
+#     key = "".join(sorted(word))
+#     if key not in groups:
+#         groups[key] = []
+
+#     groups[key].append(word)
+
+# print(list(groups.values()))

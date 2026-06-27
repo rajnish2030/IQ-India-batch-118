@@ -20,7 +20,7 @@
 #             print("Not a palindrome")
 # names = ['madam','rajnish','hello']
 # Palindrome(names)
-
+            
 # # count vowel
 # def vowels_count(str1):
 #     vowel = "aeiouAEIOU"

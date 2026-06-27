@@ -231,3 +231,20 @@
 #     print(i[::-1])
 
 
+#issubset()----------------------
+team_a = {"Rajnish", "Amit"}
+team_b = {"Rajnish", "Amit", "Rahul"}
+
+print(team_a.issubset(team_b))
+
+#issuperset()--------------------
+team_b = {"Rajnish", "Amit", "Rahul"}
+team_a = {"Rajnish", "Amit"}
+
+print(team_b.issuperset(team_a))
+
+#isdisjoint()=======================
+team_a = {"Rajnish", "Amit"}
+team_b = {"Priya", "Rahul"}
+
+print(team_a.isdisjoint(team_b))
