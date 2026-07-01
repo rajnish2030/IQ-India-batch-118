@@ -1,0 +1,7 @@
+Namerajish
+Age24
+Name :Rahul
+Age :20
+
+Name :gandhi 
+Age :20
